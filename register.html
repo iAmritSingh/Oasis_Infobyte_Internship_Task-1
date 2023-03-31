@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        .register {
+
+            height: calc(100vh - 50px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+        }
+
+        .registerTitle {
+            font-size: 50px;
+        }
+
+        .registerForm {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .registerForm>label {
+            margin: 10px 0;
+        }
+
+        .registerInput {
+            padding: 10px;
+            background-color: white;
+            border: none;
+        }
+
+        .registerButton {
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: teal;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .registerLoginButton {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: lightcoral;
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+    <script src="regter.js"></script>
+</head>
+
+<body>
+    <div class="register">
+        <span class="registerTitle">Register</span>
+        <form name="myForm" class="registerForm" onsubmit="return validateForm()">
+
+            <label for="fname">First name</label>
+            <input type="text" class="registerInput" id="fname" name="fname" value=""
+                placeholder="Enter your first name...">
+            <label for="lname">Last name</label>
+            <input type="text" class="registerInput" id="lname" name="lname" value=""
+                placeholder="Enter your last name...">
+            <label for="username">Username</label>
+            <input type="text" class="registerInput" id="username" name="username" value=""
+                placeholder="Enter your username...">
+            <p>Username must be of minimum length 5</p>
+            <label for="email">Email</label>
+            <input type="email" class="registerInput" id="email" value="" placeholder="Enter your email...">
+            <label for="password">Password</label>
+            <input type="password" class="registerInput" id="password" value="" name="password"
+                placeholder="Enter your password...">
+            <p>password must be of minimum length 10 && contain one upperCase,digit and special character</p>
+            <button class="registerButton" type="submit"> Register </button>
+        </form>
+        <button class="registerLoginButton">
+            <Link class="link" to="/login">
+            Login
+
+        </button>
+    </div>
+
+
+</body>
+
+</html>
